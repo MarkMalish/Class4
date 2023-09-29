@@ -34,7 +34,11 @@
   <i>By Tammy Coron January 10, 2020</i>
   <p></p>
   <h2>Discover what Sass is, and learn how to start using it.</h2>
-
+  <form>
+    <img id = "myImage" src = "arrow.jpeg" />
+    <p>Click button below to move the image to right</p>
+    <input type = "button" value = "Click Me" onclick = "moveRight();" />
+ </form>      
 <h3><i>What is Sass? That's the question we here to answer. If you're new to web design, you've probably heard the term floating around, but you might not be quite up to speed with exactly what Sass is, what is does, and whether or not you should be using it. In short, Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins (sometimes referred to as syntactic sugar) into regular CSS. The aim is to make the coding process simpler and more efficient. Let's explore in more detail. </i></h3>
 <h3><i>Article source: https://www.creativebloq.com/web-design/what-is-sass-111517618</i></h3>
 <h2>What is a CSS preprocessor?</h2>
@@ -185,6 +189,22 @@ Note: When importing partials, you don't need to include the file extension or t
       <br></p>
    <h2> Tammy Coron</h2>
    <b>Tammy is an independent creative professional and the host of Roundabout: Creative Chaos. She’s also the owner of Just Write Code, an independent production company located in West Tennessee. For more information about Tammy, visit her website by clicking the icons above. </b>
+   <script type = "text/javascript">
+    <!--
+       var imgObj = null;
+       
+       function init() {
+          imgObj = document.getElementById('myImage');
+          imgObj.style.position= 'relative'; 
+          imgObj.style.left = '0px'; 
+       }
+       function moveRight() {
+          imgObj.style.left = parseInt(imgObj.style.left) + 20 + 'px';
+       }
+       
+       window.onload = init;
+    //-->
+ </script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
